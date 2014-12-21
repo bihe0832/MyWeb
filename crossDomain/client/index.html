@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Cross Domain Test</title>
+<script type="text/javascript" src="./jquery.min.js"></script> 
+</head>
+<body>
+cross domain By JSONP
+<BR />
+<a href="javascript:CorssDomain.ajax();" id="test1">get JSONP Data by JQuery ajax:</a>
+<div>
+	data:
+	<span id="test1data"></span>
+</div>
+<a href="javascript:CorssDomain.getjson();" id="test2">get JSONP Data by JQuery getjson</a>
+<div>
+	data:
+	<span id="test2data"></span>
+</div>
+<a href="javascript:CorssDomain.get();" id="test3">get JSONP Data by JQuery get</a>
+<div>
+	data:
+	<span id="test3data"></span>
+</div>
+<HR>
+cross domain By Server
+<BR />
+<a href="javascript:CorssDomain.byServer();" id="test4">get JSON Data by JQuery ajax:</a>
+<div>
+	data:
+	<span id="test4data"></span>
+</div>
+
+<script type="text/javascript">
+//所有Ajax请求的URL
+var postUrl = "http://blog.bihe0832.com/microdemo/";
+var CorssDomain = {};
+CorssDomain.ajax = function(){
+	$.ajax({  
+		type: "get",  
+		url: postUrl + "jsonp.php",  
+		dataType:"jsonp",
+		async: false,
+		data: {rd:Math.random()},
+		jsonp: 'callback',
+		success: function(result) { 
+			 var html=""
+			 for(var i in result) html+= i +":" +result[i] +";"; 
+			 $("#test1data").html(html);
+		},
+		error: function(err) {  
+			alert("fail");
+		} 
+	}); 
+}
+
+CorssDomain.getjson =function() {
+	$.getJSON(postUrl + "jsonp.php?callback=?", 
+		{rd: Math.random()}, 
+		function(result) {   
+			 var html=""
+			 for(var i in result) html+= i +":" +result[i] +";"; 
+			 $("#test2data").html(html);
+    });   
+}
+
+CorssDomain.get =function() {
+	 $.get(postUrl + "jsonp.php?callback=?", 
+			 {rd: Math.random()}, 
+			 function (result) { 
+				 var html=""
+				 for(var i in result) html+= i +":" +result[i] +";"; 
+				 $("#test3data").html(html);
+				 
+			},
+			'jsonp'
+		);  
+}
+
+CorssDomain.byServer = function(){
+	$.ajax({  
+		type: "get",  
+		url: postUrl + "crossdomain.php",  
+		dataType:"json",
+		async: false,
+		data: {rd:Math.random()},
+		success: function(result) { 
+			 var html=""
+			 for(var i in result) html+= i +":" +result[i] +";"; 
+			 $("#test4data").html(html);
+		},
+		error: function(err) {  
+			alert("fail");
+		} 
+	}); 
+}
+</script>  
+</body>
+</html>

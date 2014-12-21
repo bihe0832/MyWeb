@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<title>冯晓山❤周是馨</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<style type="text/css">
+@charset "utf-8";
+/* code@bihe832.com */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td{margin:0;padding:0;list-style:none;}
+fieldset,img{border:0;}
+body{ background-color:#00599D;}
+img{
+	width:100%;
+	border:0;
+}
+.link{
+			text-align:center;
+			padding-top:15px;
+			height:40px;
+		}
+		a{
+			color:#fff;
+			font-size:20px;
+			font-weight:bold;
+			font-family:Microsoft Yahei;
+			text-decoration:none;
+		}
+		a:hover{
+			color:#ddd;
+		}
+		a:visited{
+			color:#fff;
+			font-size:20px;
+			font-weight:bold;
+			font-family:Microsoft Yahei;
+			text-decoration:none;
+		}
+		a:active{
+			color:#ddd;
+		}
+		
+#musicControl{
+	position:fixed;
+	width: 40px;
+	height: 40px;
+	top: 50%;
+	left: 85%;
+	-webkit-animation: ani_arrow 1.2s ease-in 0s infinite;
+	-moz-animation: ani_arrow 1.2s ease-in 0s infinite;
+	-ms-animation: ani_arrow 1.2s ease-in 0s infinite;
+	animation: ani_arrow 1.2s ease-in 0s infinite;
+	z-index: 5;
+	background: url('./img/mcbg.png') no-repeat;
+}
+</style>
+<script>
+		var music=true;
+		function play_music(){
+		var musicfx = document.getElementById('musicfx');
+		var musicControl = document.getElementById('musicControl');
+		
+			if(music){
+				musicfx.pause();
+				musicControl.style.backgroundPosition="left bottom";
+				music=false;
+			}else{
+				musicfx.play();
+				musicControl.style.backgroundPosition="left top";
+				music=true;
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<div id="musicControl" onclick="play_music();">
+		<a id="mc_play" class="on" >
+			<audio id="musicfx" loop="loop" autoplay="autoplay">
+				<source src="http://microdemo.sinaapp.com/MyJS/invite/img/Summer.mp3" type="audio/mpeg">
+			</audio>
+		</a>
+	</div>
+	<div>
+			<img src="./img/xc/1.jpg"/>
+			<img src="./img/xc/2.jpg"/>
+			<img src="./img/xc/3.jpg"/>
+			<img src="./img/xc/4.jpg"/>
+			<img src="./img/xc/5.jpg"/>
+			<img src="./img/xc/6.jpg"/>
+			<img src="./img/xc/7.jpg"/>
+			<img src="./img/xc/8.jpg"/>
+			<img src="./img/xc/9.jpg"/>
+			<img src="./img/xc/10.jpg"/>
+		</div>
+		<div class="link">
+		<a style="padding-right:5%;"href="./index.html"> 查看请柬</a>
+		<a style="padding-right:5%;"href="https://wxapp.tenpay.com/v2/hybrid/www/weixin/hongbao/index.shtml?showwxpaytitle=冯晓山❤周是馨&channel=wxhb">发红包</a>
+		<a href="./map.html">地图导航 </a>
+	</div>
+	<script type="text/javascript"
+		src="http://tajs.qq.com/stats?sId=22818306" charset="UTF-8"></script>
+
+	<script src="./js/halo.js"></script>
+	<script>
+		var path = window.location.protocol + "//" + window.location.host
+				+ window.location.pathname.replace(/[^\/]+$/, '');
+		halo.shareConfig = {
+			img_url : path + 'img/head.jpg',
+			img_width : 80,
+			img_heigth : 80,
+			link : path + 'index.html?'
+					+ Math.round(new Date().getTime() / 1000),
+			title : '我们结婚啦！冯晓山❤周是馨',
+			desc : "2015年1月2日11:30，南昌市瑞颐大酒店，恭候您的光临！"
+		};
+	</script>
+</body>
+</html>

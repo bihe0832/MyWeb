@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<title>冯晓山❤周是馨</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="./css/style.css?123">
+<script>
+		var music=true;
+		function play_music(){
+		var musicfx = document.getElementById('musicfx');
+		var musicControl = document.getElementById('musicControl');
+		
+			if(music){
+				musicfx.pause();
+				musicControl.style.backgroundPosition="left bottom";
+				music=false;
+			}else{
+				musicfx.play();
+				musicControl.style.backgroundPosition="left top";
+				music=true;
+			}
+		}
+
+	</script>
+</head>
+<body>
+
+	<div id="J_loading" class="mp_loading hide">
+		<div class="mp_loading_cont">
+			<div class="mp_loading_l">
+				<i></i><i></i><i></i>
+			</div>
+			<div class="mp_loading_r">
+				<i></i><i></i><i></i>
+			</div>
+			<div class="mp_loading_coffee">
+				<i></i><i></i><i></i>
+			</div>
+			<!--div class="mp_loading_bar"><i></i></div-->
+		</div>
+		<txt id="J_percent" class="mp_loading_txt">100</txt>
+	</div>
+	<div id="musicControl" onclick="play_music();">
+		<a id="mc_play" class="on" >
+			<audio id="musicfx" loop="loop" autoplay="autoplay">
+				<source src="http://microdemo.sinaapp.com/MyJS/invite/img/Summer.mp3" type="audio/mpeg">
+			</audio>
+		</a>
+	</div>
+	<div id="J_mask" class="mask hide">
+		<b>感谢您分享喜讯给更多的亲人和朋友，快乐我们共享！</b>
+	</div>
+	<div id="J_z_mask" class="z_mask hide"></div>
+	<div id="J_frame" src="form.html" class="frame_form ani_hide">
+		<iframe name="hidden_frame" class="hide" id="hidden_frame"></iframe>
+		<form action="./add.php" method="post" target="hidden_frame" id="J_form">
+			<input id="input_position" name="r_position" value="" type="hidden">
+			<div id="J_jianli" class="jianli">
+				<div class="jianli_hd">
+					<i id="J_close" class="close"></i>
+					<h2>冯晓山 ❤ 周是馨敬请光临！</h2>
+				</div>
+				<div id="J_content1" class="content_inner">
+					<ul id="J_jianli1" class="jianli_ul jianli_ul_1">
+						<li id="J_yname"><label for="input_1">您的姓名：</label>
+							<div class="warp_input">
+								<input name="r_name" id="input_1" type="text">
+							</div></li>
+						<li id="J_yphone"><label for="input_2">赴宴人数：</label>
+							<div class="warp_input">
+								<input name="r_phone" id="input_2" type="tel">
+							</div></li>
+						<li><label for="input_3">留言祝福：</label>
+							<div class="warp_input">
+								<input id="input_3" name="r_email" type="email">
+							</div></li>
+					</ul>
+					<ul id="J_jianli2" class="jianli_ul jianli_ul_2 hide">
+						<li><label for="input_6">您的性别：</label>
+							<div class="warp_input input_slc">
+								<i></i> <select name="r_sex" id="input_6">
+									<option selected="selected" value="帅哥">帅哥</option>
+									<option value="帅哥">美女</option>
+								</select>
+							</div></li>
+						<li id="J_exp"><input id="input_4" name="r_tag"
+							class="jingli" type="hidden"> <label for="input_4">新人关系：</label>
+							<div class="warp_input input_plus">
+								<div id="J_cpy" class="cpy"></div>
+								<i></i> <select id="input_5" class="s_plus" name="">
+									<option selected="selected" value="老公朋友">老公朋友</option>
+									<option value="老公亲属">老公亲属</option>
+									<option value="老公同学">老公同学</option>
+									<option value="老婆朋友">老婆朋友</option>
+									<option value="老婆亲属">老婆亲属</option>
+									<option value="老婆同学">老婆同学</option>
+									<option value="其他">其他</option>
+								</select>
+							</div></li>
+					</ul>
+					<div id="J_submit" class="submit">祝福新人</div>
+				</div>
+				<div id="J_content2" class="content2 hide">
+					<div class="submit_ok">
+						已经收到信息，<br> 感谢参加！
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+
+	<div id="J_wrapper" class="content">
+		<div class="wrapper">
+			<ul class="container"
+				style="height: 0px; width: 0px; -webkit-transform: translate3d(0px, 0px, 0px);">
+				<li class="page pagefm" style="width: 0px; height: 0px;">
+					<div class="content">
+					<img id="imgbg" src="./img/fm.jpg" width="100%" height="100%" style="right: 0; bottom: 0; position: absolute; top: 0; left: 0; z-index: -1" />
+					<div class="info pagefmText" style="color:#fff">谨定于2015年01月02日南昌市<BR>瑞颐大酒店举行婚宴，敬请光临</div>
+					<div class="icos_arrow_up"></div>
+				</li>
+				<li class="page pagegs" style="width: 0px; height: 0px;">
+					<div class="icos_arrow_down"></div>
+					<div class="content hidden">
+						<img id="imgbg" src="./img/gs.jpg" width="100%" height="100%" style="right: 0; bottom: 0; position: absolute; top: 0; left: 0; z-index: -1" />
+					</div>
+					<div class="icos_arrow_up"></div>
+				</li>
+				<li class="page pageyq" style="width: 0px; height: 0px;">
+					<div class="icos_arrow_down"></div>
+					<div class="content hidden">
+						<img id="imgbg" src="./img/yq.jpg" width="100%" height="100%" style="right: 0; bottom: 0; position: absolute; top: 0; left: 0; z-index: -1" />
+						<div class="info">
+							<a href="javascript:;" id="J_photobtn" class="butt" style="margin-right:3%;">相册</a>
+							<a href="javascript:;" id="J_mapbtn" class="butt" style="margin-right:3%;">导航</a>
+							<a href="javascript:;" data-id="3" class="S_yp butt" style="margin-right:3%;">留言</a> 
+							<!--<a href="javascript:;" id="" class="butt" style="margin-right:3%;">祝福</a>-->
+							<a href="javascript:;" id="J_hongbaobtn" class="butt" >红包</a>
+						</div>
+					</div>
+				</li>
+		</ul>
+		
+		</div>
+	</div>
+	<div class="landscape">
+		<div class="iphone"></div>
+		<div class="iphone_text">请将屏幕竖向浏览</div>
+	</div>
+	<script src="./js/halo.js"></script>
+	<script>
+		var path = window.location.protocol + "//" + window.location.host
+				+ window.location.pathname.replace(/[^\/]+$/, '');
+		halo.shareConfig = {
+			img_url : path + 'img/head.jpg',
+			img_width : 80,
+			img_heigth : 80,
+			link : path + 'index.html?'
+					+ Math.round(new Date().getTime() / 1000),
+			title : '我们结婚啦！冯晓山❤周是馨',
+			desc : "2015年1月2日11:30，南昌市瑞颐大酒店，恭候您的光临！"
+		};
+	</script>
+	<script>
+		var J_loading = document.getElementById('J_loading');
+		var J_wrapper = document.getElementById('J_wrapper');
+		var J_percent = document.getElementById('J_percent');
+
+		/* ani */
+		var page1_ani1 = document.getElementById('page1_ani1');
+		var page1_ani2 = document.getElementById('page1_ani2');
+		var page1_ani3 = document.getElementById('page1_ani3');
+
+		var J_mask = document.getElementById('J_mask');
+		var J_z_mask = document.getElementById('J_z_mask');
+		var J_frame = document.getElementById('J_frame');
+		var input_position = document.getElementById('input_position');
+		var J_font = document.getElementById('J_font');
+		var J_gb = document.getElementById('J_gb');
+		var J_mapbtn =  document.getElementById('J_mapbtn');
+		var J_photobtn =  document.getElementById('J_photobtn');
+		var J_hongbaobtn =  document.getElementById('J_hongbaobtn');
+		halo
+				.use(
+						'yscroll',
+						'loader',
+						function(m) {
+							var loader = new m.loader([ './img/iphone49bc.png'])
+									.loadend(
+											function() {
+												J_percent.innerHTML = parseInt(this.percent);
+
+												if (this._index == 3) {
+													m.removeClass(J_wrapper,
+															'hide');
+												}
+											})
+									.complete(
+											function() {
+												m.addClass(J_loading, 'hide');
+
+												var _last_idx = 0;
+												var wrapper_scroll = new m.yscroll(
+														'.wrapper',
+														{
+															Scontainer : '.container',
+															hScroll : false,
+															vScroll : true,
+															momentum : true,
+															bounce : false,
+															snap : true,
+															scrollBefore : function(
+																	name, e) {
+															},
+															onScroll : function(
+																	name, obj) {
+															},
+															onTouchEnd : function(
+																	name, obj) {
+															},
+															scrollEnd : function(
+																	index) {
+																var pages = this.$li;
+																for ( var i = 0; i < pages.length; i++) {
+																	halo.util
+																			.addClass(
+																					pages[i]
+																							.querySelector('.content'),
+																					'hide');
+																}
+																;
+																halo.util
+																		.removeClass(
+																				pages[index]
+																						.querySelector('.content'),
+																				'hide');
+															}
+														});
+												J_mapbtn
+														.addEventListener(
+																'touchstart',
+																function(e) {
+																	window.location= path+"map.html"
+																});
+												J_photobtn
+														.addEventListener(
+																'touchstart',
+																function(e) {
+																	window.location= path+"photo.html"
+																});
+
+												J_hongbaobtn
+														.addEventListener(
+																'touchstart',
+																function(e) {
+																	window.location= "https://wxapp.tenpay.com/v2/hybrid/www/weixin/hongbao/index.shtml?showwxpaytitle=1&channel=wxhb";
+																});				
+																
+																
+																
+												document
+														.addEventListener(
+																'touchstart',
+																function(e) {
+																	var target = e.targetTouches ? e.targetTouches[0]
+																			: e.target;
+																	if (target.target.className
+																			.indexOf('S_yp') > -1) {
+
+																		target = target.target;
+																		var id = target.dataset['id'];
+																		halo.util
+																				.removeClass(
+																						J_frame,
+																						'ani_hide');
+																		halo.util
+																				.addClass(
+																						J_wrapper,
+																						'suoxiao');
+																		halo.util
+																				.removeClass(
+																						J_z_mask,
+																						'hide');
+																		input_position.value = id;
+																		console
+																				.log(id);
+																	}
+																});
+												/*var S_yp = document.querySelectorAll('.S_yp');
+
+												S_yp = Array.prototype.slice.call(S_yp, 0);
+
+												for (var i = 0; i < S_yp.length; i++) {
+												  S_yp[i].addEventListener('touchstart', )
+												};*/
+
+												var J_submit = document
+														.getElementById('J_submit');
+												var J_form = document
+														.getElementById('J_form');
+												var J_content1 = document
+														.getElementById('J_content1');
+												var J_content2 = document
+														.getElementById('J_content2');
+
+												var i_name = document
+														.getElementById('input_1');
+												var i_phone = document
+														.getElementById('input_2');
+												var i_mail = document
+														.getElementById('input_3');
+												var i_year = document
+														.getElementById('input_6');
+												var i_exp = document
+														.getElementById('input_4');
+												var input_5 = document
+														.getElementById('input_5');
+												var J_jianli1 = document
+														.getElementById('J_jianli1');
+												var J_jianli2 = document
+														.getElementById('J_jianli2');
+												var J_yphone = document
+														.getElementById('J_yphone');
+												var J_exp = document
+														.getElementById('J_exp');
+												var J_yname = document
+														.getElementById('J_yname');
+
+												var trim = function(str) {
+													return str.replace(
+															/(^\s*)|(\s*$)/g,
+															"");
+												}
+												J_submit
+														.addEventListener(
+																'click',
+																function(e) {
+																		halo.util
+																				.removeClass(
+																						J_exp,
+																						'error');
+																	J_form
+																			.submit();
+																	halo.util
+																			.removeClass(
+																					J_content2,
+																					'hide');
+																	halo.util
+																			.addClass(
+																					J_content1,
+																					'hide');
+																	setTimeout(
+																			function() {
+																				halo.util
+																						.addClass(
+																								J_frame,
+																								'ani_hide');
+																				halo.util
+																						.addClass(
+																								J_z_mask,
+																								'hide');
+																				halo.util
+																						.addClass(
+																								J_content2,
+																								'hide');
+																				halo.util
+																						.removeClass(
+																								J_content1,
+																								'hide');
+																				halo.util
+																						.removeClass(
+																								J_wrapper,
+																								'suoxiao');
+																			},
+																			1000);
+																});
+
+												input_5
+														.addEventListener(
+																'change',
+																function() {
+																	if (i_exp.value
+																			.indexOf(input_5.value) > -1)
+																		return;
+																	var tag = document
+																			.createElement('div');
+																	tag.className = 'cpy_tag';
+																	tag.innerHTML = input_5.value;
+																	J_cpy
+																			.appendChild(tag);
+																	i_exp.value = i_exp.value
+																			+ input_5.value;
+																});
+
+												J_close
+														.addEventListener(
+																'click',
+																function() {
+																	halo.util
+																			.removeClass(
+																					J_content1,
+																					'hide');
+																	halo.util
+																			.addClass(
+																					J_content2,
+																					'hide');
+																	halo.util
+																			.removeClass(
+																					J_wrapper,
+																					'suoxiao');
+																	halo.util
+																			.addClass(
+																					J_z_mask,
+																					'hide');
+																	halo.util
+																			.addClass(
+																					J_frame,
+																					'ani_hide');
+																});
+
+												J_z_mask
+														.addEventListener(
+																'touchstart',
+																function(e) {
+																	e
+																			.preventDefault();
+																	e
+																			.stopPropagation();
+																})
+												J_jianli
+														.addEventListener(
+																'click',
+																function(e) {
+																	var target = e.targetTouches ? e.targetTouches[0]
+																			: e.target;
+																	if (target.className
+																			.indexOf('cpy_tag') > -1) {
+																		var _exp = i_exp.value;
+																		var txt = target.innerHTML;
+																		_exp = _exp
+																				.replace(
+																						','
+																								+ txt,
+																						'');
+																		i_exp.value = _exp;
+																		target.parentNode
+																				.removeChild(target);
+																	}
+																})
+
+											});
+						});
+
+		var browser = {
+			versions : function() {
+				var u = navigator.userAgent, app = navigator.appVersion;
+				return {//移动终端浏览器版本信息
+					trident : u.indexOf('Trident') > -1, //IE内核
+					presto : u.indexOf('Presto') > -1, //opera内核
+					webKit : u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+					gecko : u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+					mobile : !!u.match(/AppleWebKit.*Mobile.*/)
+							|| !!u.match(/AppleWebKit/), //是否为移动终端
+					ios : !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+					android : u.indexOf('Android') > -1
+							|| u.indexOf('Linux') > -1, //android终端或者uc浏览器
+					iPhone : u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+					iPad : u.indexOf('iPad') > -1, //是否iPad
+					webApp : u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+					weixin : u.indexOf('MicroMessenger') > -1
+				};
+			}(),
+			language : (navigator.browserLanguage || navigator.language)
+					.toLowerCase(),
+			versionNum : function() {
+				/*版本号,只针对android*/
+				var u = navigator.userAgent, matchIndex = u.indexOf('Android');
+				if (matchIndex > -1) {
+					var num = u.substring(matchIndex + 7, matchIndex + 11)
+							.replace(' ', '');
+					return parseFloat(num);
+				}
+				return '';
+			}(),
+			avail : function() {
+				return {
+					width : document.documentElement.clientWidth,
+					height : document.documentElement.clientHeight
+				};
+			}()
+		};
+
+		if (parseFloat(browser.versionNum) <= 2.3) {
+			halo.util.addClass(J_wrapper, 'andoird2-3');
+		}
+	</script>
+	<script type="text/javascript"
+		src="http://tajs.qq.com/stats?sId=22818306" charset="UTF-8"></script>
+</body>
+</html>

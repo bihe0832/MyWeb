@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+		body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0; background-color:#00599D;}
+		#allmap {height: 90%;}
+		#golist {display: none;}
+		.link{
+			text-align:center;
+			padding-top:5%;
+		}
+		a{
+			color:#fff;
+			font-size:20px;
+			font-weight:bold;
+			font-family:Microsoft Yahei;
+			text-decoration:none;
+		}
+		a:hover{
+			color:#ddd;
+		}
+		a:visited{
+			color:#fff;
+			font-size:20px;
+			font-weight:bold;
+			font-family:Microsoft Yahei;
+			text-decoration:none;
+		}
+		a:active{
+			color:#ddd;
+		}
+		@media (max-device-width: 780px){#golist{display: block !important;}}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?type=quick&ak=87nja7RSgkKMReQ3WRbdKUsw&v=1.0"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=87nja7RSgkKMReQ3WRbdKUsw"></script>
+	<title>冯晓山❤周是馨</title>
+</head>
+<body>
+	<div id="allmap"></div>
+	<div id="link" class="link">
+		<a style="padding-right:5%;"href="./index.html"> 查看请柬</a>
+		<a style="padding-right:5%;"href="https://wxapp.tenpay.com/v2/hybrid/www/weixin/hongbao/index.shtml?showwxpaytitle=冯晓山❤周是馨&channel=wxhb">发红包</a>
+		<a href="./photo.html"> 查看相册</a>
+	</div>
+	
+	<script type="text/javascript">
+var map = new BMap.Map("allmap");
+	var startpoint = new BMap.Point(115.889235,28.690746);
+	var finalpoint = new BMap.Point(115.889235,28.690746);
+	var opts = {
+				width : 400,    // 信息窗口宽度
+				height: 40,     // 信息窗口高度
+				title : "南昌瑞颐大酒店"  // 信息窗口标题
+			}
+	map.centerAndZoom(finalpoint,14);
+	var geolocation = new BMap.Geolocation();
+	geolocation.getCurrentPosition(function(r){
+		if(this.getStatus() == BMAP_STATUS_SUCCESS){
+			startpoint = r.point;
+			map.panTo(startpoint);
+			map.addControl(new BMap.ZoomControl());   
+			var marker1 = new BMap.Marker(finalpoint);  // 创建标注
+			map.addOverlay(marker1);              // 将标注添加到地图中
+			var driving = new BMap.DrivingRoute(map, {renderOptions:{map: map, autoViewport: true}});
+			driving.search(startpoint, finalpoint);
+		}
+		else {
+			alert('failed'+this.getStatus());
+		}        
+	},{enableHighAccuracy: true})
+	
+</script>
+<script src="./js/halo.js"></script>
+	<script>
+		var path = window.location.protocol + "//" + window.location.host
+				+ window.location.pathname.replace(/[^\/]+$/, '');
+		halo.shareConfig = {
+			img_url : path + 'img/head.jpg',
+			img_width : 80,
+			img_heigth : 80,
+			link : path + 'index.html?'
+					+ Math.round(new Date().getTime() / 1000),
+			title : '我们结婚啦！冯晓山❤周是馨',
+			desc : "2015年1月2日11:30，南昌市瑞颐大酒店，恭候您的光临！"
+		};
+	</script>
+</body>
+</html>
+
