@@ -1,5 +1,6 @@
 MyWeb
 ======
+
 ####Socket
 - Demo地址：PHP实现的简单重复发包： [http://microdemo.bihe0832.com/MyJS/Socket/index.php](http://microdemo.bihe0832.com/MyJS/Socket/index.php)
 - 功能简述：抓包以后重复复现问题的方法
@@ -20,6 +21,10 @@ MyWeb
 - Demo地址：简单通过JS在页面中间弹框：[http://microdemo.bihe0832.com/MyJS/showCenter/](http://microdemo.bihe0832.com/MyJS/showCenter/)
 - 功能简述：在页面居中JS弹框（类似alert）
 
+#### upload
+- Demo地址：基于PHP的一个简单文件上传demo（最精简的发布系统）：[http://microdemo.bihe0832.com/MyJS/upload/](http://microdemo.bihe0832.com/MyJS/upload/)
+- 功能简述：基于PHP的一个简单文件上传demo（最精简的发布系统）。
 
-
-    
+#### blank
+- Demo地址：符合HTML标准的，不喊任何内容的html页面，方便自己开发使用：[http://microdemo.bihe0832.com/MyJS/blank/](http://microdemo.bihe0832.com/MyJS/blank/)
+- 功能简述：符合HTML标准的，不喊任何内容的html页面，方便自己开发使用。
