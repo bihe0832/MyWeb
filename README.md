@@ -5,8 +5,8 @@ MyWeb
 - 功能简述：抓包以后重复复现问题的方法
 
 ####brower
-- Demo地址：JS检测当前浏览器类型 [http://microdemo.bihe0832.com/MyJS/brower/index.html](http://microdemo.bihe0832.com/MyJS/brower/index.html)
-- 功能简述：JS检测当前浏览器类型
+- Demo地址：JS检测当前浏览器类型 [http://microdemo.bihe0832.com/MultiQrcode/tools.html](http://microdemo.bihe0832.com/MultiQrcode/tools.html)
+- 功能简述：JS检测当前浏览器类型，此部分功能已经专门用了一个repository来描述，具体查看：[https://github.com/bihe0832/MultiQrcode](https://github.com/bihe0832/MultiQrcode)
 
 ####crossDomain
 - Demo地址：JS跨域获取数据方法： [http://microdemo.bihe0832.com/MyJS/crossDomain/client/index.html](http://microdemo.bihe0832.com/MyJS/crossDomain/client/index.html)
