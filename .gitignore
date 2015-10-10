@@ -1,2 +1,7 @@
-map/*
+cd map/*
 temp/*
+res/.svn/*
+Socket/.svn/*
+crossDomain/.svn/
+showCenter/.svn/
+upload/.svn/
