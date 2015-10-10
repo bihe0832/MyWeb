@@ -26,5 +26,5 @@ MyWeb
 - 功能简述：基于PHP的一个简单文件上传demo（最精简的发布系统）。
 
 #### blank
-- Demo地址：符合HTML标准的，不含任何内容的html页面，方便自己开发使用：[http://microdemo.bihe0832.com/MyJS/blank/](http://microdemo.bihe0832.com/MyJS/blank/)
+- Demo地址：符合HTML标准的，不含任何内容的html空白页面，方便自己开发使用：[http://microdemo.bihe0832.com/res/](http://microdemo.bihe0832.com/res/)
 - 功能简述：符合HTML标准的，不含任何内容的html页面，方便自己开发使用。
