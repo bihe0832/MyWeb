@@ -25,6 +25,6 @@ MyWeb
 - Demo地址：基于PHP的一个简单文件上传demo（最精简的发布系统）：[http://microdemo.bihe0832.com/MyJS/upload/](http://microdemo.bihe0832.com/MyJS/upload/)
 - 功能简述：基于PHP的一个简单文件上传demo（最精简的发布系统）。
 
-#### blank
-- Demo地址：符合HTML标准的，不含任何内容的html空白页面，方便自己开发使用：[http://microdemo.bihe0832.com/res/](http://microdemo.bihe0832.com/res/)
-- 功能简述：符合HTML标准的，不含任何内容的html页面，方便自己开发使用。
+#### res
+- Demo地址：web开发公共资源：[http://microdemo.bihe0832.com/res/](http://microdemo.bihe0832.com/res/)
+- 功能简述：自己web开发中一些通用的资源（空白页，兼容性css，site icon 等）。
