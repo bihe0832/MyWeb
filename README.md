@@ -13,6 +13,10 @@ MyWeb
 - Demo地址：JS跨域获取数据方法： [http://microdemo.bihe0832.com/MyJS/crossDomain/client/index.html](http://microdemo.bihe0832.com/MyJS/crossDomain/client/index.html)
 - 功能简述：常见集中跨域异步获取数据的方法
 
+#### iframe-iterate-for-view-webpage
+- Demo地址：利用iframe在一个页面，通过点击前进后台浏览一批网址内容： [http://microdemo.bihe0832.com/MyJS/iframe-iterate-for-view-webpage/all.html](http://microdemo.bihe0832.com/MyJS/iframe-iterate-for-view-webpage/all.html)
+- 功能简述：利用iframe在一个页面，通过点击前进后台浏览一批网址内容
+
 #### invite
 - Demo地址：H5实现的微信邀请函：[http://microdemo.bihe0832.com/MyJS/invite/index.html](hhttp://microdemo.bihe0832.com/MyJS/invite/index.html)
 - 功能简述：H5实现的微信邀请函

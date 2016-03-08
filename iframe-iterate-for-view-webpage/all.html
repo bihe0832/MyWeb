@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" " http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=" http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta name="author" CONTENT="子勰(bihe0832), code@bihe0832.com" />
+  <meta name="keywords" content="子勰,bihe0832" />
+  <meta name="description" content="子勰的空白页面" />
+  <title>基于IFrame的简单的遍历浏览网址内容的页面</title>
+  <style type="text/css">
+
+   html {
+    display: blank;
+}
+      body {
+          font-family: "Microsoft Yahei", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+          color: #333;
+          background-color: white;
+          margin: 10px 13px 10px 30px;
+          line-height: 36px;
+          clear: both;
+
+      }
+    
+*.important {
+	color:red;
+	margin: 10px 13px 10px 30px;
+     font-size: 888px;
+     width: 120px;
+     height: 80px;
+}
+     
+    iframe{
+      width: 100%;
+      height: 900px;
+      margin:0px;
+    }
+
+  </style>
+</head>
+<body>
+
+<div>
+	<input class="important" type="button" value="下一个网址" onclick="next()" />
+	<input class="important" type="button" value="上一个网址" onclick="pre()" />
+	您已经浏览了：<span id="dianjicishu">0</span>个网址！
+</div>
+<iframe id="viewPage" src="">
+	开始浏览，请点击下一个网址开始浏览！
+</iframe>
+<script>
+  var links = new Array("https://www.baidu.com/","http://www.qq.com/","https://www.taobao.com/","http://game.qq.com/");
+
+	var x=0;
+  function next(){
+      document.getElementById('dianjicishu').innerHTML = x+1;
+      document.getElementById('viewPage').src = links[x];
+      x=x+1;
+  }
+  function pre(){
+	   history.back();
+	}
+</script>
+</html>
