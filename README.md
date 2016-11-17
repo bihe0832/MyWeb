@@ -32,3 +32,7 @@ MyWeb
 #### res
 - Demo地址：web开发公共资源：[http://microdemo.bihe0832.com/res/](http://microdemo.bihe0832.com/res/)
 - 功能简述：自己web开发中一些通用的资源（空白页，兼容性css，site icon 等）。
+
+#### testPHP
+
+功能简述：自己写的一个简单的检测常用PHP模块是否都已经配置OK的demo。
