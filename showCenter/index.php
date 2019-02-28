@@ -92,6 +92,6 @@ function showTips (tips){
 	document.getElementById("show").style.display="";
 }
 </script>
-<script type="text/javascript" src="http://tajs.qq.com/stats?sId=25799863" charset="UTF-8"></script>
+<script type="text/javascript" src="https://tajs.qq.com/stats?sId=25799863" charset="UTF-8"></script>
 </body></html>
 

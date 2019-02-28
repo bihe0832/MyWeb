@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no" />
-    <link rel = "Shortcut Icon" href="http://zixie.sinaapp.com/resource/images/zixie_32.ico" />
+    <link rel = "Shortcut Icon" href="https://microdemo.bihe0832.com/res/images/zixie_32.ico" />
 
     <meta name="author" CONTENT="子勰(bihe0832), code@bihe0832.com" />
     <meta name="keywords" content="PHP 文件上传" />
@@ -110,6 +110,6 @@
       </div>
     </div>
   </div>
-<script type="text/javascript" src="http://tajs.qq.com/stats?sId=37805902" charset="UTF-8"></script>
+<script type="text/javascript" src="https://tajs.qq.com/stats?sId=37805902" charset="UTF-8"></script>
 </body>
 </html>
