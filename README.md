@@ -30,7 +30,7 @@ MyWeb
 - 功能简述：基于PHP的一个简单文件上传demo（最精简的发布系统）。
 
 #### res
-- Demo地址：web开发公共资源：[http://blog.bihe0832.com/my_html.html](http://blog.bihe0832.com/my_html.html)
+- Demo地址：web开发公共资源：[https://blog.bihe0832.com/my_html.html](https://blog.bihe0832.com/my_html.html)
 - 功能简述：自己web开发中一些通用的资源（空白页，兼容性css，site icon 等）。
 
 #### testPHP
