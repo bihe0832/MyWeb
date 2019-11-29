@@ -65,6 +65,7 @@
             document.getElementById("title").style.display = 'none';
           } else {
             window.location.href = MultiQrcodeLink.android;
+            document.getElementById("jump").href = MultiQrcodeLink.android;
           }
         } else {
           document.getElementById("tips").innerHTML = "请使用Android手机体验打开链接体验";
@@ -77,6 +78,7 @@
 <body>
   <h1 id="title">Android路由跳转中转页</h1>
   <span id="tips"></span>
+  <a id="jump" href=""></a>
   <script type="text/javascript" src="https://tajs.qq.com/stats?sId=37805902" charset="UTF-8"></script>
 </body>
 
