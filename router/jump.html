@@ -17,20 +17,119 @@
       font-family: "Microsoft Yahei", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
       color: #333;
       background-color: white;
-      margin: 10px 13px 10px 30px;
       line-height: 36px;
       clear: both;
+      text-align: center;
     }
 
     h1 {
       color: #333;
-      margin-bottom: 12px;
-      margin-top: 12px;
-      font-size: 20px;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    #content {
+            width:400px;
+            height:600px;
+            position:absolute;
+            left:50%;
+            top:50%;
+            margin: -200px 0 0 -200px;
+    }
+
+    #icon {
+      width: 150px;
+      height: 150px;
     }
 
     span {
       color: red;
+      font-size: 10px;
+    }
+
+    #buttonlist {
+      margin-top: 20px;
+    }
+
+    .button {
+      background-color: #008CBA;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+    }
+
+    #snackbar {
+      visibility: hidden;
+      min-width: 60px;
+      margin-left: -90px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 2px;
+      padding: 10px 20px;
+      position: fixed;
+      z-index: 1;
+      left: 50%;
+      bottom: 30px;
+      font-size: 14px;
+    }
+
+    #snackbar.show {
+      visibility: visible;
+      -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+      animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+
+    @-webkit-keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0;
+      }
+
+      to {
+        bottom: 30px;
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0;
+      }
+
+      to {
+        bottom: 30px;
+        opacity: 1;
+      }
+    }
+
+    @-webkit-keyframes fadeout {
+      from {
+        bottom: 30px;
+        opacity: 1;
+      }
+
+      to {
+        bottom: 0;
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeout {
+      from {
+        bottom: 30px;
+        opacity: 1;
+      }
+
+      to {
+        bottom: 0;
+        opacity: 0;
+      }
     }
   </style>
 
@@ -43,7 +142,6 @@
     }
     window.onload = function () {
       document.getElementById("tips").innerHTML = "";
-      document.getElementById("title").style.display = 'block';
       var routerURL = getUrlParam("value")
       // var scheme = routerURL.substring(0,routerURL.indexOf(":"))
       // var params = routerURL.substring(routerURL.indexOf(":") + 3)
@@ -62,23 +160,41 @@
           var app = ZixieJS.browser.getSuperAPP();
           if (ZixieJS.browser.app.wechat == app) {
             document.getElementById("tips").innerHTML = "由于微信平台限制无法主动跳转，请点击右上角选择用系统浏览器打开链接";
-            document.getElementById("title").style.display = 'none';
           } else {
             window.location.href = MultiQrcodeLink.android;
-            document.getElementById("jump").href = MultiQrcodeLink.android;
           }
         } else {
           document.getElementById("tips").innerHTML = "请使用Android手机体验打开链接体验";
         }
       }
+      document.getElementById("openAPP").onclick = function () {
+        window.location.href = MultiQrcodeLink.android;
+      };
+
+      document.getElementById("downloadAPP").onclick = function () {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        // setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+      };
     };
   </script>
 </head>
 
 <body>
-  <h1 id="title">Android路由跳转中转页</h1>
-  <span id="tips"></span>
-  <a id="jump" href="">dsdsdsd</a>
+  <div id="content">
+    <div>
+      <h1>Android路由跳转中转页</h1>
+    </div>
+    <img id="icon" src="https://blog.bihe0832.com/public/img/head.jpg">
+    <div>
+      <span id="tips"></span>
+    </div>
+    <div id="buttonlist">
+      <button id="openAPP" class="button">打开APP</button>
+      <button id="downloadAPP" class="button">下载APP</button>
+    </div>
+  </div>
+  <div id="snackbar">功能开发中，敬请期待</div>
   <script type="text/javascript" src="https://tajs.qq.com/stats?sId=37805902" charset="UTF-8"></script>
 </body>
 
