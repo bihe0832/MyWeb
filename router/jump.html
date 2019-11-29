@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+  <title>Android路由跳转中转页 — 子勰</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="http://microdemo.bihe0832.com/res/css/global.css" type="text/css" media="screen" />
+  <link rel="Shortcut Icon" href="https://microdemo.bihe0832.com/res/images/zixie_32.ico">
+  <script type="text/javascript" src="http://microdemo.bihe0832.com/res/js/brower.js" charset="UTF-8"></script>
+  <style type="text/css">
+    body {
+      font-family: "Microsoft Yahei", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+      color: #333;
+      background-color: white;
+      margin: 10px 13px 10px 30px;
+      line-height: 36px;
+      clear: both;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 12px;
+      margin-top: 12px;
+      font-size: 20px;
+    }
+
+    span {
+      color: red;
+    }
+  </style>
+
+  <script type="text/javascript">
+    function getUrlParam(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return unescape(r[2]);
+      return "";
+    }
+    window.onload = function () {
+      document.getElementById("tips").innerHTML = "";
+      var routerURL = getUrlParam("value")
+      var scheme = routerURL.substring(0,routerURL.indexOf(":"))
+      var params = routerURL.substring(routerURL.indexOf(":") + 3)
+      var packageName = getUrlParam("packageName")
+      var path = "http://microdemo.bihe0832.com/MyJS/router/index.html?value=" + routerURL
+      var MultiQrcodeLink = {
+        PC: path,
+        android: routerURL
+      };
+      if (ZixieJS.browser.isPc()) {
+        document.getElementById("tips").innerHTML = "请使用Android手机体验打开链接体验";
+        window.location.href = MultiQrcodeLink.PC;
+      } else {
+        var devices = ZixieJS.browser.getDevices();
+        if (ZixieJS.browser.devices.android == devices) {
+          var app = ZixieJS.browser.getSuperAPP();
+          if (ZixieJS.browser.app.wechat == app) {
+            document.getElementById("tips").innerHTML = "由于微信平台限制无法主动跳转，请点击右上角选择用系统浏览器打开链接";
+          } else {
+            window.location.href = MultiQrcodeLink.android;
+          }
+        } else {
+          document.getElementById("tips").innerHTML = "请使用Android手机体验打开链接体验";
+        }
+      }
+    };
+  </script>
+</head>
+
+<body>
+  <h1>Android路由跳转中转页</h1>
+  <span id="tips"></span>
+  <script type="text/javascript" src="https://tajs.qq.com/stats?sId=37805902" charset="UTF-8"></script>
+</body>
+
+</html>
