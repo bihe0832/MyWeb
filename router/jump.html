@@ -25,16 +25,16 @@
     h1 {
       color: #333;
       font-size: 14px;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
 
     #content {
-            width:400px;
-            height:600px;
-            position:absolute;
-            left:50%;
-            top:50%;
-            margin: -200px 0 0 -200px;
+      width: 400px;
+      height: 600px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -200px 0 0 -200px;
     }
 
     #icon {
@@ -42,8 +42,14 @@
       height: 150px;
     }
 
-    span {
+    #tips {
       color: red;
+      margin-top: 30px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    span {
       font-size: 10px;
     }
 
@@ -174,20 +180,24 @@
       document.getElementById("downloadAPP").onclick = function () {
         var x = document.getElementById("snackbar");
         x.className = "show";
-        // setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+        setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
       };
     };
   </script>
 </head>
 
 <body>
+  <div id="tips">
+    假如页面没有自动跳转，请确认是否安装对应客户端
+  </div>
   <div id="content">
     <div>
       <h1>Android路由跳转中转页</h1>
     </div>
     <img id="icon" src="https://blog.bihe0832.com/public/img/head.jpg">
     <div>
-      <span id="tips"></span>
+      <span class="tips">假如页面没有自动跳转，请确认是否安装对应客户端</span><BR>
+      <span class="tips">安装客户端后点击打开APP即可跳转</span>
     </div>
     <div id="buttonlist">
       <button id="openAPP" class="button">打开APP</button>
