@@ -154,7 +154,7 @@
     }
     window.onload = function () {
       document.getElementById("tips").innerHTML = "";
-      var routerURL = decodeURIComponent(getUrlParam("value"))
+      var routerURL = decodeURIComponent(decodeURI(getUrlParam("value")))
       document.getElementById("link").innerHTML = routerURL;
       // var scheme = routerURL.substring(0,routerURL.indexOf(":"))
       // var params = routerURL.substring(routerURL.indexOf(":") + 3)
