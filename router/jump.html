@@ -159,7 +159,7 @@
       // var scheme = routerURL.substring(0,routerURL.indexOf(":"))
       // var params = routerURL.substring(routerURL.indexOf(":") + 3)
       // var packageName = getUrlParam("packageName")
-      var path = "https://microdemo.bihe0832.com/MyJS/router/index.html?value=" + routerURL
+      var path = "https://microdemo.bihe0832.com/MyJS/router/index.html?value=" + encodeURIComponent(encodeURI(routerURL))
       var MultiQrcodeLink = {
         PC: path,
         android: routerURL
