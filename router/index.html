@@ -46,7 +46,6 @@
 
     <script type="text/javascript">
         var indexUrl = "https://microdemo.bihe0832.com/MyJS/router/jump.html?value="
-
         function getUrlParam(name) {
             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
             var r = window.location.search.substr(1).match(reg);
@@ -54,23 +53,26 @@
             return "";
         }
 
-        function updateURL(value) {
-            var resultURL = indexUrl + encodeURIComponent(encodeURI(value))
+        function getFinalURL(){
+            return indexUrl + encodeURIComponent(encodeURI($("#router-input").get(0).value))
+        }
+
+        function updateURL() {
+            var resultURL = getFinalURL()
             $("#router-result").get(0).value = "扫码后跳转的URL为：" + resultURL
             $("#img-qrcode").get(0).src = "http://qr.topscan.com/api.php?text=" + resultURL
         }
 
         $("#router-input").on("input", function (e) {
-            updateURL(this.value)
+            updateURL()
         });
 
         $("#button-show-qrcode").click(function () {
-            updateURL($("#router-input").get(0).value)
+            updateURL()
         });
 
         $("#button-jump").click(function () {
-            var resultURL = indexUrl + $("#router-input").get(0).value
-            window.location.href = resultURL
+            window.location.href = getFinalURL()
         });
 
         $(document).ready(function () {

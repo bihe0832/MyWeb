@@ -154,7 +154,7 @@
     }
     window.onload = function () {
       document.getElementById("tips").innerHTML = "";
-      var routerURL = decodeURIComponent(decodeURI(getUrlParam("value")))
+      var routerURL = decodeURIComponent(getUrlParam("value"))
       document.getElementById("link").innerHTML = routerURL;
       // var scheme = routerURL.substring(0,routerURL.indexOf(":"))
       // var params = routerURL.substring(routerURL.indexOf(":") + 3)
@@ -166,7 +166,7 @@
       };
       if (ZixieJS.browser.isPc()) {
         document.getElementById("tips").innerHTML = "请使用Android手机体验打开链接体验";
-        // window.location.href = MultiQrcodeLink.PC;
+        window.location.href = MultiQrcodeLink.PC;
       } else {
         var devices = ZixieJS.browser.getDevices();
         if (ZixieJS.browser.devices.android == devices) {
