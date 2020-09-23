@@ -60,7 +60,7 @@
         function updateURL() {
             var resultURL = getFinalURL()
             $("#router-result").get(0).value = "扫码后跳转的URL为：" + resultURL
-            $("#img-qrcode").get(0).src = "http://qr.topscan.com/api.php?text=" + encodeURIComponent(resultURL)
+            $("#img-qrcode").get(0).src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(resultURL)
         }
 
         $("#router-input").on("input", function (e) {
