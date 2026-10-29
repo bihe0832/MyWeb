@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
+<meta name="zixie-type" content="common" />
+<meta name="zixie-ignore" content="color-token,glass-gradient,font-title" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 	<style type="text/css">
@@ -15,7 +17,7 @@
 			color:#fff;
 			font-size:20px;
 			font-weight:bold;
-			font-family:Microsoft Yahei;
+			font-family:-apple-system, BlinkMacSystemFont, Microsoft Yahei;
 			text-decoration:none;
 		}
 		a:hover{
@@ -25,7 +27,7 @@
 			color:#fff;
 			font-size:20px;
 			font-weight:bold;
-			font-family:Microsoft Yahei;
+			font-family:-apple-system, BlinkMacSystemFont, Microsoft Yahei;
 			text-decoration:none;
 		}
 		a:active{
@@ -36,8 +38,10 @@
 	<script type="text/javascript" src="http://api.map.baidu.com/api?type=quick&ak=87nja7RSgkKMReQ3WRbdKUsw&v=1.0"></script>
 		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=87nja7RSgkKMReQ3WRbdKUsw"></script>
 	<title>冯晓山❤周是馨</title>
+    <link rel="canonical" href="https://microdemo.bihe0832.com/invite/map.html" />
 </head>
 <body>
+<a href="javascript:history.go(-1)">返回</a>
 	<div id="allmap"></div>
 	<div id="link" class="link">
 		<a style="padding-right:5%;"href="./index.html"> 查看请柬</a>
@@ -67,12 +71,12 @@ var map = new BMap.Map("allmap");
 			driving.search(startpoint, finalpoint);
 		}
 		else {
-			alert('failed'+this.getStatus());
+			showAlert('failed'+this.getStatus());
 		}        
 	},{enableHighAccuracy: true})
 	
 </script>
-<script src="./js/halo.js"></script>
+<script src="./js/halo.js?v=49880597"></script>
 	<script>
 		var path = window.location.protocol + "//" + window.location.host
 				+ window.location.pathname.replace(/[^\/]+$/, '');
@@ -86,6 +90,16 @@ var map = new BMap.Map("allmap");
 			desc : "2015年1月2日11:30，南昌市瑞颐大酒店，恭候您的光临！"
 		};
 	</script>
+<script src="https://cdn.bihe0832.com/js/pikachu-stats.js?v=44a15b01" defer></script>
+<script>
+function showAlert(msg) {
+  var d = document.createElement('div');
+  d.textContent = msg;
+  d.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.8);color:#fff;padding:12px 20px;border-radius:8px;z-index:9999;font-size:14px;';
+  document.body.appendChild(d);
+  setTimeout(function(){ d.remove(); }, 2000);
+}
+</script>
 </body>
 </html>
 

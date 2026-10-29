@@ -1,6 +1,9 @@
 <!DOCTYPE html lang="zh-CN">
+<html lang="zh-CN">
 
 <head>
+<meta name="zixie-type" content="common" />
+<meta name="zixie-ignore" content="color-token,glass-gradient,font-title" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
@@ -15,9 +18,12 @@
     <script type="text/javascript">
         window.location.href = "https://cdn.bihe0832.com/tools/router/index.html";
       </script>
+    <link rel="canonical" href="https://microdemo.bihe0832.com/router/index.html" />
+<style>button { padding: 8px 16px; }</style>
 </head>
 
 <body>
+<a href="javascript:history.go(-1)">返回</a>
     <div class="container">
         <div class="row">
             <h4>Android路由跳转链接生成工具 — <a href="https://blog.bihe0832.com" target="_blank">子勰</a></h4>
@@ -42,7 +48,7 @@
 
             <div class="span4">
                 <img id="img-qrcode" src="https://qr.topscan.com/api.php?text=http://blog.bihe0832.com"
-                    style="width: 150px;height: 150px;">
+                    style="width: 150px;height: 150px;" alt="blog.bihe0832.com">
             </div>
         </div>
     </div>
@@ -84,6 +90,19 @@
             updateURL(routerURL)
         })
     </script>
+<script src="https://cdn.bihe0832.com/js/pikachu-stats.js?v=44a15b01" defer></script>
+<script>
+document.addEventListener('focusin', function(e) {
+  var el = e.target;
+  if (el.tagName === 'INPUT' && (el.type === 'number' || el.type === 'text')) {
+    if (!el.dataset.wasFocused) { el.select(); el.dataset.wasFocused = '1'; }
+  }
+});
+document.addEventListener('focusout', function(e) {
+  var el = e.target;
+  if (el.tagName === 'INPUT') { el.dataset.wasFocused = ''; }
+});
+</script>
 </body>
 
 </html>

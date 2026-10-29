@@ -1,11 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html lang="zh-CN">
 <head>
+<meta name="zixie-type" content="common" />
+<meta name="zixie-ignore" content="color-token,glass-gradient,font-title" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Cross Domain Test</title>
-<script type="text/javascript" src="./jquery.min.js"></script> 
+    <link rel="canonical" href="https://microdemo.bihe0832.com/crossDomain/client/index.html" />
 </head>
 <body>
+<a href="javascript:history.go(-1)">返回</a>
 cross domain By JSONP
 <BR />
 <a href="javascript:CorssDomain.ajax();" id="test1">get JSONP Data by JQuery ajax:</a>
@@ -32,7 +35,10 @@ cross domain By Server
 	<span id="test4data"></span>
 </div>
 
-<script type="text/javascript">
+  
+<script src="https://cdn.bihe0832.com/js/pikachu-stats.js?v=44a15b01" defer></script>
+  <script type="text/javascript" src="./jquery.min.js?v=fc184f96"></script>
+  <script type="text/javascript">
 //所有Ajax请求的URL
 var postUrl = "https://microdemotest.bihe0832.com/crossDomain/";
 var CorssDomain = {};
@@ -50,7 +56,7 @@ CorssDomain.ajax = function(){
 			 $("#test1data").html(html);
 		},
 		error: function(err) {  
-			alert("fail");
+			showAlert("fail");
 		} 
 	}); 
 }
@@ -91,10 +97,19 @@ CorssDomain.byServer = function(){
 			 $("#test4data").html(html);
 		},
 		error: function(err) {  
-			alert("fail");
+			showAlert("fail");
 		} 
 	}); 
 }
-</script>  
+</script>
+<script>
+function showAlert(msg) {
+  var d = document.createElement('div');
+  d.textContent = msg;
+  d.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.8);color:#fff;padding:12px 20px;border-radius:8px;z-index:9999;font-size:14px;';
+  document.body.appendChild(d);
+  setTimeout(function(){ d.remove(); }, 2000);
+}
+</script>
 </body>
 </html>
